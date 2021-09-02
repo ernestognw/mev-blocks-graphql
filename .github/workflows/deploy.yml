@@ -24,5 +24,5 @@ jobs:
         application_name: mev-blocks-graphql
         environment_name: production
         version_label: ${{ github.sha }}-${{ steps.date.outputs.date }}
-        region: us-west-1
+        region: us-east-1
         deployment_package: deploy.zip
