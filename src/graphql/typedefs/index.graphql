@@ -1,16 +1,49 @@
 type Query {
-  # Blocks
+  """
+  Returns the 100 most recent flashbots blocks. This also contains a list of transactions that were part of the flashbots bundle. Use query parameters to filter this down to blocks you're interested in.
+  """
   blocks(
+    """	
+    Filter to a single miner address
+    """
     miner: String
+    """
+    Filter to get blocks including transactions sent by from
+    """
     from: String
-    before: String
-    limit: Int
+    """
+    Filter blocks to before this block number (exclusive, does not include this block number)
+    """
+    before: String = "latest"
+    """
+    Number of blocks that are returned
+    Range between 1-10000
+    """
+    limit: Int = 100
   ): [Block]!
-  block(block_number: Int!): Block
 
-  # Transactions
+  """
+  Returns just a single block equal to the given block_number
+  """
+  block(
+    """
+    Number of the block to return
+    """  
+    block_number: Int!
+  ): Block
+
+  """
+  Returns the 100 most recent flashbots transactions. Use the before query param to filter to transactions before a given block number.
+  """
   transactions(
-    before: String
-    limit: Int
+    """
+    Filter transactions to before this block number (exclusive, does not include this block number)
+    """
+    before: String = "latest"
+    """
+    Number of transactions that are returned
+    Range between 1-10000
+    """
+    limit: Int = 100
   ): [Transaction]!
 }

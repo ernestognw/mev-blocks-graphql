@@ -1,13 +1,46 @@
-type Transaction { 
+type Transaction {
+  """
+  transaction hash
+  """
   transaction_hash: String!
+  """
+  index of tx inside of bundle
+  """
   tx_index: Int!
+  """
+  index of bundle inside of the block
+  """
   bundle_indeX: Int!
+  """
+  block number
+  """
   block_number: Int!
+  """
+  address of the externally owned account that created this transaction
+  """
   eoa_address: String!
+  """	
+  to address
+  """
   to_address: String!
+  """
+  gas used in this transaction
+  """
   gas_used: Int!
+  """
+  gas price of this transaction
+  """
   gas_price: String!
+  """
+  ETH directly transferred to the coinbase, not counting gas
+  """
   coinbase_transfer: String!
+  """
+  ETH transferred to the coinbase, including gas and direct transfers
+  """
   total_miner_reward: String!
+  """
+  Block which this transaction belongs to
+  """
   block: Block!
 }
