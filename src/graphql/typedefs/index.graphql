@@ -1,0 +1,17 @@
+type Query {
+  # Blocks
+  blocks(
+    miner: String
+    from: String
+    before: String
+    limit: Int
+  ): [Block]!
+  block(blockNumber: Int!): Block
+
+  # Transactions
+  transactions(
+    before: String
+    limit: Int
+  ): [Transaction]!
+  transaction(id: ID!): Transaction
+}

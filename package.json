@@ -1,0 +1,25 @@
+{
+  "name": "mev-blocks-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist",
+    "dev": "nodemon src --exec babel-node",
+    "build": "BABEL_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored"
+  },
+  "dependencies": {
+    "@graphql-tools/schema": "^8.2.0",
+    "apollo-server-express": "^3.3.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "graphql": "^15.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "nodemon": "^2.0.12"
+  }
+}

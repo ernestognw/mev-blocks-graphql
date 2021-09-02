@@ -1,0 +1,9 @@
+type Block { 
+  blockNumber: Int!
+  miner: String!
+  minerReward: String!
+  coinbaseTransfers: String!
+  gasUsed: String!
+  gasPrice: String!
+  transactions: [Transaction]!
+}
