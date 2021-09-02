@@ -1,4 +1,4 @@
-type Block { 
+type Block {
   """
   Block number
   """
@@ -11,7 +11,7 @@ type Block {
   The total ETH reward paid to the miner. This includes gas fees and coinbase transfers
   """
   miner_reward: String!
-  """	
+  """
   The total ETH transferred directly to coinbase, not counting gas
   """
   coinbase_transfers: String!
@@ -19,11 +19,11 @@ type Block {
   Total gas used by the bundle
   """
   gas_used: String!
-  """	
+  """
   The adjusted gas price of the bundle. This is not an actual gas price, but it is what's used by mev-geth to sort bundles. Found by doing: miner_reward/gas_used
   """
   gas_price: String!
-  """	
+  """
   List of transactions
   """
   transactions: [Transaction]!

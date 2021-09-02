@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node dist",
     "dev": "nodemon src --exec babel-node",
-    "build": "BABEL_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored"
+    "build": "BABEL_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored",
+    "lint": "eslint",
+    "prettier": "prettier --write \"**/*.{js,graphql,json}\""
   },
   "dependencies": {
     "@babel/cli": "^7.14.8",
@@ -23,6 +25,26 @@
     "@babel/core": "^7.15.0",
     "@babel/node": "^7.14.9",
     "@babel/preset-env": "^7.15.0",
-    "nodemon": "^2.0.12"
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier . && git add . && pretty-quick --staged",
+      "pre-push": "yarn lint ."
+    }
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "dist/*"
+    ]
   }
 }

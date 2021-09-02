@@ -1,5 +1,5 @@
 type Query {
-  """	
+  """
   The latest block number that has been processed
   """
   latest_block_number: Int!
@@ -8,7 +8,7 @@ type Query {
   Returns the 100 most recent flashbots blocks. This also contains a list of transactions that were part of the flashbots bundle. Use query parameters to filter this down to blocks you're interested in.
   """
   blocks(
-    """	
+    """
     Filter to a single miner address
     """
     miner: String
@@ -33,7 +33,7 @@ type Query {
   block(
     """
     Number of the block to return
-    """  
+    """
     block_number: Int!
   ): Block
 

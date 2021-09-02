@@ -1,4 +1,5 @@
-# ⚡ mev-blocks-graphql 
+# ⚡ mev-blocks-graphql
+
 A GraphQL wrapper for the original https://blocks.flashbots.net/
 
 ## Development
@@ -21,6 +22,7 @@ Then, just run:
 ```
 yarn dev
 ```
+
 Runs the application on your preferred port (default 3000)
 
 Go to [http://localhost:3000/graphql/v1](http://localhost:3000/graphql/v1) to use from Apollo Studio

@@ -19,7 +19,7 @@ type Transaction {
   address of the externally owned account that created this transaction
   """
   eoa_address: String!
-  """	
+  """
   to address
   """
   to_address: String!

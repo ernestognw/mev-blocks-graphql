@@ -1,5 +1,5 @@
-import { mevBlocks } from "third-party/flashbots";
-import qs from "query-string";
+import { mevBlocks } from '@third-party/flashbots';
+import qs from 'query-string';
 
 const blockQueries = {
   blocks: async (_, { miner, from, before, limit }) => {

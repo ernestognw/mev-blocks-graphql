@@ -1,5 +1,5 @@
-import express from "express";
-import graphqlServer from "./graphql";
+import express from 'express';
+import graphqlServer from './graphql';
 
 const startApp = async () => {
   const app = express();
