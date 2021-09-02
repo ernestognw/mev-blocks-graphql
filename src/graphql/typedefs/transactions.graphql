@@ -10,7 +10,7 @@ type Transaction {
   """
   index of bundle inside of the block
   """
-  bundle_indeX: Int!
+  bundle_index: Int!
   """
   block number
   """
