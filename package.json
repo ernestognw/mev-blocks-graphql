@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist",
+    "start": "node ./dist",
     "dev": "nodemon src --exec babel-node",
     "build": "BABEL_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored",
     "lint": "eslint",
