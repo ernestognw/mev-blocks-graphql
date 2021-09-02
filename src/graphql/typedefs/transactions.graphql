@@ -1,13 +1,13 @@
 type Transaction { 
-  transactionHash: String!
-  txIndex: Int!
-  bundleIndeX: Int!
-  blockNumber: Int!
-  eoaAddress: String!
-  toAddress: String!
-  gasUsed: Int!
-  gasPrice: String!
-  coinbaseTransfer: String!
-  totalMinerReward: String!
+  transaction_hash: String!
+  tx_index: Int!
+  bundle_indeX: Int!
+  block_number: Int!
+  eoa_address: String!
+  to_address: String!
+  gas_used: Int!
+  gas_price: String!
+  coinbase_transfer: String!
+  total_miner_reward: String!
   block: Block!
 }

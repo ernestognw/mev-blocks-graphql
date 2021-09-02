@@ -1,9 +1,9 @@
 type Block { 
-  blockNumber: Int!
+  block_number: Int!
   miner: String!
-  minerReward: String!
-  coinbaseTransfers: String!
-  gasUsed: String!
-  gasPrice: String!
+  miner_reward: String!
+  coinbase_transfers: String!
+  gas_used: String!
+  gas_price: String!
   transactions: [Transaction]!
 }

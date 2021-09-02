@@ -6,12 +6,11 @@ type Query {
     before: String
     limit: Int
   ): [Block]!
-  block(blockNumber: Int!): Block
+  block(block_number: Int!): Block
 
   # Transactions
   transactions(
     before: String
     limit: Int
   ): [Transaction]!
-  transaction(id: ID!): Transaction
 }

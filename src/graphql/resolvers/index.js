@@ -1,10 +1,10 @@
-import { blocksQueries } from "./blocks";
-import { transactionsQueries } from "./transactions";
+import { blockQueries } from "./blocks";
+import { transactionQueries } from "./transactions";
 
 const resolvers = {
   Query: {
-    ...blocksQueries,
-    ...transactionsQueries,
+    ...blockQueries,
+    ...transactionQueries,
   },
 };
 
