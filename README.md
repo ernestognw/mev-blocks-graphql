@@ -2,6 +2,8 @@
 
 A GraphQL wrapper for the original https://blocks.flashbots.net/
 
+You can explore the API on [Apollo Studio](https://studio.apollographql.com/sandbox/explorer?endpoint=https%3A%2F%2Fmev-blocks.ernestognw.com%2Fgraphql%2Fv1)
+
 ## Development
 
 In order to make the API work, just copy the `env.example` into a `.env` file and fill the variables with your desired information.
