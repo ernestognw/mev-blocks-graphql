@@ -1,9 +1,13 @@
 import { port } from '@config/environment';
-import startApp from './app';
+import graphqlServer from '@graphql';
+import app from './app';
 
 const start = async () => {
   try {
-    const app = await startApp();
+    await graphqlServer.start();
+    graphqlServer.applyMiddleware({
+      app,
+    });
     await app.listen(port);
     console.info(`🚀  GraphQL server running at port: ${port}`);
   } catch {

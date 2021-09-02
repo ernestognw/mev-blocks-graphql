@@ -1,16 +1,9 @@
 import express from 'express';
-import graphqlServer from './graphql';
+import healthCheck from '@middlewares/health-check';
 
-const startApp = async () => {
-  const app = express();
+const app = express();
 
-  await graphqlServer.start();
+// Routes
+app.use('/', healthCheck);
 
-  graphqlServer.applyMiddleware({
-    app,
-  });
-
-  return app;
-};
-
-export default startApp;
+export default app;

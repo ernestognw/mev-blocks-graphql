@@ -17,7 +17,8 @@
         "alias": {
           "@config": "./src/config",
           "@third-party": "./src/third-party",
-          "@graphql": "./src/graphql"
+          "@graphql": "./src/graphql",
+          "@middlewares": "./src/middlewares"
         }
       }
     ]
