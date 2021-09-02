@@ -9,6 +9,7 @@
     "build": "BABEL_ENV=production babel src --out-dir dist --copy-files --no-copy-ignored"
   },
   "dependencies": {
+    "@babel/cli": "^7.14.8",
     "@graphql-tools/schema": "^8.2.0",
     "apollo-server-express": "^3.3.0",
     "axios": "^0.21.1",
