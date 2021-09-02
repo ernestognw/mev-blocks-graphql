@@ -1,4 +1,9 @@
 type Query {
+  """	
+  The latest block number that has been processed
+  """
+  latest_block_number: Int!
+
   """
   Returns the 100 most recent flashbots blocks. This also contains a list of transactions that were part of the flashbots bundle. Use query parameters to filter this down to blocks you're interested in.
   """
