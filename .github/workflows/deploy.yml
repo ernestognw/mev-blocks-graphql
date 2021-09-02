@@ -13,8 +13,18 @@ jobs:
     - name: Checkout source code
       uses: actions/checkout@v2
 
+    - name: Install dependencies
+      uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: install
+
+    - name: Build package
+      uses: borales/actions-yarn@v2.3.0
+      with:
+        cmd: build
+
     - name: Generate deployment package
-      run: zip -r deploy.zip . -x '*.git*'
+      run: zip application.zip -r .
 
     - name: Deploy to EB
       uses: einaregilsson/beanstalk-deploy@v18
@@ -25,4 +35,4 @@ jobs:
         environment_name: production
         version_label: ${{ github.sha }}-${{ steps.date.outputs.date }}
         region: us-east-1
-        deployment_package: deploy.zip
+        deployment_package: application.zip
